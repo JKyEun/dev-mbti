@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import OrangeButton from '../components/OrangeButton';
 import styled from 'styled-components';
-import { next } from '../store/modules/mbti';
+import { check, next } from '../store/modules/mbti';
 import Progress from '../components/Progress';
 
 const SurveyQuestion = styled.p`
@@ -30,6 +30,7 @@ export default function Mbti() {
               <OrangeButton
                 text={el.text}
                 clickEvent={() => {
+                  dispatch(check(el.result));
                   dispatch(next());
                 }}
               />
