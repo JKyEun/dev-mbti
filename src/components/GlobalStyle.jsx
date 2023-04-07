@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'NeoDunggeunmoPro-Regular', sans-serif;
     white-space: pre-wrap;
+    text-align: center;
   }
 
   ul, ol {
